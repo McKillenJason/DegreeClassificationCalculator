@@ -1,4 +1,12 @@
+/**
+ * 
+ * @author Jason McKillen QUB MSc Software Development
+ * TODO: Add JUnit tests
+ * TODO: Improve whitespace and code readability/cleanliness
+ *
+ */
 package graduationCalculator;
+// Imports the necessary libraries for reading from and writing to files.
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -11,7 +19,7 @@ import java.io.BufferedWriter;
 public class Calculator {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Reduce repetition of code
 		
 		ArrayList<Student> students = new ArrayList<Student>();
 		loadStudents(students);
@@ -52,6 +60,7 @@ public class Calculator {
 			e.printStackTrace();
 		}
 	}
+	// Sets degree classifications in line with MSc Software Development guidelines
 		public static void calculateClassifications(ArrayList<Student> students) throws IllegalArgumentException {
 			for(Student student:students) {
 				if(student.calculateAverage() >= 70 && student.calculateAverage() <=100) {
@@ -79,7 +88,6 @@ public class Calculator {
 				}
 				bw.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
